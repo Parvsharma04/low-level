@@ -170,4 +170,15 @@ public:
         }
         return false;
     }
+
+    ~CallCenter() {
+        for (auto e : operators)
+            delete e;
+
+        for (auto e : supervisors)
+            delete e;
+
+        for (auto e : directors)
+            delete e;
+    }
 };
